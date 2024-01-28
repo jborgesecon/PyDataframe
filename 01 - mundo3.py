@@ -6,6 +6,7 @@ import main_utils as mu
 general = {
     'Episode 16 (Tuples)':{
         'Number Name (e72)': mu.numberName,
+        'Team Ranking (e73)': mu.basketballRanking,
         'Go Back': 'break'
     },
     'Episode 17': {
@@ -29,17 +30,9 @@ while True:
         mu.print_menu(eps[nav - 1], general[eps[nav - 1]])
         functions = list(general[eps[nav - 1]].keys())
 
-        
-
-        #Answer Validation again
-        while True:
-            nav2 = mu.intvalid(input('Choose the desired function: '))
-            if nav2 > 0 and nav2 <= len(functions):
-                break
-            else:
-                print('\nType a value within the range')
-
+        nav2 = mu.rangevalid(general[eps[nav - 1]])
         value = general[eps[nav - 1]][functions[nav2 - 1]]
+
         if value == 'break':
             break
         while True:
@@ -49,3 +42,4 @@ while True:
                 print(value)
             if not mu.tryAgain():
                 break
+

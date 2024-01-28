@@ -5,6 +5,7 @@ import unicodedata
 error = ('type a valid answer: ')
 yes_or_no = ('type "y" for YES and "n" for NO: ')
 n_or_p = 'type "n" for NEXT and "p" for PREVIOUS: '
+range1 = '\nType a value within the range!\n'
 
 #Input Validation
 
@@ -93,7 +94,7 @@ def rangevalid(eps):
         if nav > 0 and nav <= len(eps):
             break
         else:
-            print('\nType a value within the range')
+            print(range1)
     return nav
 
 def tryAgain():
@@ -102,7 +103,6 @@ def tryAgain():
         return True
     else:
         return False
-        
 
 #Special defs
 
@@ -164,10 +164,47 @@ def specialint(text):
 #Mundo 3
 
 def numberName():
-    print('Your number was Six! ')
+    tp1 = (
+        'zero',
+        'one',
+        'two',
+        'three',
+        'four',
+        'five',
+        'six',
+        'seven',
+        'eight',
+        'nine',
+        'ten'
+    )
+
+    while True:
+        number = intvalid(input('\nType a number between 0 and 10: '))
+        if number not in range(len(tp1)):
+            print(range1)
+        else:
+            break
+    
+    print(f'\nYour number was {tp1[number]}!\n')
     return
 
+def basketballRanking():
+    ranking = (
+        'Bucks',
+        'Celtics',
+        '76ers',
+        'Nuggets',
+        'Grizzlies',
+        'Cavaliers',
+        'Kings',
+        'Knics',
+        
 
+    )
+    print('The NBA ranking of 2023 was:\n')
+    for i, option in enumerate(ranking, start=1):
+        print(f'{i}° - ', option)
+    print('\n')
 
 
 

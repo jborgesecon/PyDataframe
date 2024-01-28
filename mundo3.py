@@ -17,21 +17,19 @@ general = {
 #Creating a list for the episodes
 eps = list(general.keys())
 
+
 #Function Main Loop
 while True:
-    mu.print_menu(eps, 'MAIN')
+    mu.print_menu('MAIN', eps)
 
     #Answer Validation (I need help creating a def for it)
-    while True:
-        nav = mu.intvalid(input('Choose your Episode: '))
-        if nav > 0 and nav <= len(eps):
-            break
-        else:
-            print('\nType a value within the range')
+    nav = mu.rangevalid(eps)
 
     while True:
-        mu.print_menu(general[eps[nav - 1]], eps[nav - 1])
+        mu.print_menu(eps[nav - 1], general[eps[nav - 1]])
         functions = list(general[eps[nav - 1]].keys())
+
+        
 
         #Answer Validation again
         while True:

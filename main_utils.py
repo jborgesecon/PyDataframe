@@ -87,6 +87,37 @@ def npvalid(text):
             text = input(n_or_p)
     return m04
 
+def rangevalid(eps):
+    while True:
+        nav = intvalid(input('Choose your Episode: '))
+        if nav > 0 and nav <= len(eps):
+            break
+        else:
+            print('\nType a value within the range')
+    return nav
+
+def tryAgain():
+    m1 = ynvalid(input('Would you like to try again? [y/n]: '))
+    if m1 == 'y':
+        return True
+    else:
+        return False
+        
+
+#Special defs
+
+def print_menu(index, options):
+    a1 = 'MENU: '
+    print('\n', 30*'-')
+    print(f'{(a1 + index):^30}')
+    print(30*'-','\n')
+
+    for i, option in enumerate(options, start=1):
+        print(f'[{i}] - ', option)
+
+    print('\n', 30*'-')
+    return
+
 def s_triangle():
     while True:
         t01 = []
@@ -132,7 +163,9 @@ def specialint(text):
 
 #Mundo 3
 
-
+def numberName():
+    print('Your number was Six! ')
+    return
 
 
 

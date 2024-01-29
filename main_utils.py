@@ -2,10 +2,14 @@
 
 import random as rd
 import unicodedata
+import pandas as pd
+
 error = ('type a valid answer: ')
 yes_or_no = ('type "y" for YES and "n" for NO: ')
 n_or_p = 'type "n" for NEXT and "p" for PREVIOUS: '
 range1 = '\nType a value within the range!\n'
+consonants = ('b','c','d','f','g','h','j','k','l','m','n','p','q','r','s','t','v','w','x','y','z')
+vowels = ('a','e','i','o','u')
 
 #Input Validation
 
@@ -64,7 +68,7 @@ def isprime(text):
 
 def iseven(text):
     m8 = text % 2
-    if m8 == 0:
+    if m8 == 0 and text != 0:
         m81 = True
     else:
         m81 =False
@@ -103,6 +107,23 @@ def tryAgain():
         return True
     else:
         return False
+
+def charValid(text):
+    m1 = text
+    while True:
+        ll1 = list(m1)
+        for i in range(len(ll1)):
+            if ll1[i].lower() in consonants or ll1[i].lower() in vowels:
+                m2 = True
+            else:
+                m2 = False
+                break
+        if not m2:
+            print('\nOnly text, no special characters allowed!\n')
+            m1 = input('Type the new value: ')
+        else:
+            break
+    return m1
 
 #Special defs
 
@@ -188,29 +209,120 @@ def numberName():
     print(f'\nYour number was {tp1[number]}!\n')
     return
 
-def basketballRanking():
-    ranking = (
-        'Bucks',
-        'Celtics',
-        '76ers',
-        'Nuggets',
-        'Grizzlies',
-        'Cavaliers',
-        'Kings',
-        'Knics',
-        
+def Standings():
+    df = pd.read_csv('Standings.csv')
+    ranking = list(df['TEAM'])
+    a1 = ranking.index('NEW YORK KNICKS')
 
-    )
-    print('The NBA ranking of 2023 was:\n')
-    for i, option in enumerate(ranking, start=1):
-        print(f'{i}° - ', option)
+    print('\nThe top 5 teams were:')
+    for i in range(0,5):
+        print(f'{i+1}° - {ranking[i]}')
+
+    ranking.reverse()
+    print('\nThe bottom 5 were:')
+    o=0
+    for i in range(0,5):
+        print(f'{len(ranking)-o}° - {ranking[i]}')
+        o+=1
+    print('\nThe top 5 in alphabetical order is:\n')
+    ranking.sort()
+    i = 1
+    while i < 6:
+        print(ranking[i])
+        i+=1
     print('\n')
 
+    print(f'The team "NEW YORK KNICKS" is in position: {a1}°\n')
 
+def fiveRandNum():
+    tp1 = (
+        rd.randint(0,100),
+        rd.randint(0,100),
+        rd.randint(0,100),
+        rd.randint(0,100),
+        rd.randint(0,100),
+        )
 
+    print(f'Your values were: ', end=' ')
+    for i in range(len(tp1)):
+        print(tp1[i], end=' ')
+    print('\n')
+    print(f'The highest value was {sorted(tp1)[-1]} and the lowest value was {sorted(tp1)[0]}\n')
+    return
 
+def inputFiveValues():
+    print('\n')
+    tp1 = (
+        intvalid(input('Type the 1° Value: ')),
+        intvalid(input('Type the 2° Value: ')),
+        intvalid(input('Type the 3° Value: ')),
+        intvalid(input('Type the 4° Value: ')),
+        intvalid(input('Type the 5° Value: '))
+    )
+    print(f'\nThe value 9 appered {tp1.count(9)} times')
+    if 3 in tp1:
+        print(f'\nThe first value 3 is in position {tp1.index(3)+1}°')
+    else:
+        print('\nThe value "3" was not added')
+    
+    evens = list()
+    for i in range(len(tp1)):
+        if iseven(tp1[i]):
+            evens.append(tp1[i])
+    
+    print(f'\nThe even numbers typed were: {evens}\n')
+    return
 
+def groceriesCatalog():
+    catalog = (
+        'bread', 1.75,
+        'tomato', 2.00,
+        'ram', 4.20,
+        'cheese', 9.99,
+        'meat', 15.90,
+        'wine', 120.32,
+        'spices', 25.00,
+        'olive oil', 22.30,
+        'ice cream', 34.90
+    )
+    
+    ctlg = "MARKET'S CATALOG"    
+    print('\n', 30*'=')
+    print(f'{ctlg:^30}')
+    print(30*'=', '\n')
 
+    for i in range(len(catalog)):
+        a1 = i % 2
+        if a1 == 0:
+            print(f'{catalog[i].ljust(23, ".").title()}', '$', str(catalog[i+1]).rjust(7, ' '))
+    print('\n', 30*'=', '\n')
 
+    return
+
+def findVowels():
+    print(("""\nIn this code,\
+ your are going to input 5 words\
+ (no special characters allowed).\
+ Then, it will return how many vowels were\
+ in each word, and what were the vowels.\n"""))
+    
+    words = (
+        charValid(input('Choose the 1° word: ')),
+        charValid(input('Choose the 2° word: ')),
+        charValid(input('Choose the 3° word: ')),
+        charValid(input('Choose the 4° word: ')),
+        charValid(input('Choose the 5° word: '))
+    )
+
+    print('\n')
+    for o in range(len(words)):
+        a1 = list(words[o].lower())
+        empty_list = list()
+        for i in range(len(a1)):
+            if a1[i] in vowels:
+                empty_list.append(a1[i])
+        print(f'{words[o]} -> contains {len(empty_list)} vowels = {empty_list}')
+    print('\n')
+    return
 
 

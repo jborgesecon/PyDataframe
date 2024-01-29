@@ -6,7 +6,11 @@ import main_utils as mu
 general = {
     'Episode 16 (Tuples)':{
         'Number Name (e72)': mu.numberName,
-        'Team Ranking (e73)': mu.basketballRanking,
+        'Basketball Ranking (e73)': mu.Standings,
+        'Five Random Numbers (e74)':mu.fiveRandNum,
+        'Input Five Values (e75)': mu.inputFiveValues,
+        'Market Catalog (e76)': mu.groceriesCatalog,
+        'Finding Vowels (e77)': mu.findVowels,
         'Go Back': 'break'
     },
     'Episode 17': {
@@ -17,7 +21,6 @@ general = {
 
 #Creating a list for the episodes
 eps = list(general.keys())
-
 
 #Function Main Loop
 while True:

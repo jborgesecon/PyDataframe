@@ -26,11 +26,7 @@ def intvalid(text):
     while True:
         try:
             m2 = int(text)
-            if m2 >= 0:
-                break
-            else:
-                m2 = m2 * -1
-                break
+            break
         except ValueError:
             text = input(error)
     return m2
@@ -339,3 +335,16 @@ def findVowels():
     return
 
 #Lists (1)
+def findTopBottom():
+    ll1 = list()
+    for i in range(5):
+        ll1.append(intvalid(input(f'type the {i+1}° value: ')))
+
+    o = ll1[0]
+    for n in range(len(ll1)):
+        if o > ll1[n]:
+            break
+        elif o == ll1[n]:
+            break
+        elif o < ll1[n]:
+            break

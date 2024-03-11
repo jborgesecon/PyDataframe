@@ -26,11 +26,19 @@ def intvalid(text):
     while True:
         try:
             m2 = int(text)
+            break
+        except ValueError:
+            text = input(error)
+    return m2
+
+def positive_intvalid(text):
+    while True:
+        try:
+            m2 = int(text)
             if m2 >= 0:
                 break
             else:
-                m2 = m2 * -1
-                break
+                text = input(error)
         except ValueError:
             text = input(error)
     return m2
@@ -184,6 +192,7 @@ def specialint(text):
 
 #Mundo 3
 
+#Tuples
 def numberName():
     tp1 = (
         'zero',
@@ -200,7 +209,7 @@ def numberName():
     )
 
     while True:
-        number = intvalid(input('\nType a number between 0 and 10: '))
+        number = positive_intvalid(input('\nType a number between 0 and 10: '))
         if number not in range(len(tp1)):
             print(range1)
         else:
@@ -275,15 +284,15 @@ def inputFiveValues():
 
 def groceriesCatalog():
     catalog = (
-        'bread', 1.75,
-        'tomato', 2.00,
-        'ram', 4.20,
-        'cheese', 9.99,
-        'meat', 15.90,
-        'wine', 120.32,
-        'spices', 25.00,
-        'olive oil', 22.30,
-        'ice cream', 34.90
+        'bread', '1.75',
+        'tomato', '2.00',
+        'ham', '4.20',
+        'cheese', '9.99',
+        'meat', '15.90',
+        'wine', '120.32',
+        'spices', '25.00',
+        'olive oil', '22.30',
+        'ice cream', '34.90'
     )
     
     ctlg = "MARKET'S CATALOG"    
@@ -325,4 +334,17 @@ def findVowels():
     print('\n')
     return
 
+#Lists (1)
+def findTopBottom():
+    ll1 = list()
+    for i in range(5):
+        ll1.append(intvalid(input(f'type the {i+1}° value: ')))
 
+    o = ll1[0]
+    for n in range(len(ll1)):
+        if o > ll1[n]:
+            break
+        elif o == ll1[n]:
+            break
+        elif o < ll1[n]:
+            break

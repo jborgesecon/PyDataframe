@@ -16,7 +16,8 @@ general = {
     'Episode 17': {
         'List of Lists': 'Not yet done',
         'Go Back': 'break'
-    }
+    },
+    'Exit':'break'
     }
 
 #Creating a list for the episodes
@@ -28,6 +29,10 @@ while True:
 
     #Answer Validation (I need help creating a def for it)
     nav = mu.rangevalid(eps)
+
+    if nav == len(general):
+        print('\nThanks for tyring this code!\n')
+        break
 
     while True:
         mu.print_menu(eps[nav - 1], general[eps[nav - 1]])

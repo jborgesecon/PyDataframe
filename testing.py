@@ -2,22 +2,70 @@ import main_utils as mu
 import pandas as pd
 import random as rd
 
-vowels = ('a','e','i','o','u')
+df = pd.read_csv('Standings.csv')
+ranking = list(df['TEAM'])
+a1 = ranking.index('NEW YORK KNICKS')
 
-words = (
-    mu.charValid(input('Choose the 1° word: ')),
-    mu.charValid(input('Choose the 2° word: ')),
-    mu.charValid(input('Choose the 3° word: ')),
-    mu.charValid(input('Choose the 4° word: ')),
-    mu.charValid(input('Choose the 5° word: '))
-)
+print('\nThe top 5 teams were:')
+for i in range(0,5):
+    print(f'{i+1}° - {ranking[i]}')
 
+ranking.reverse()
+print('\nThe bottom 5 were:')
+o=0
+for i in range(0,5):
+    print(f'{len(ranking)-o}° - {ranking[i]}')
+    o+=1
+print('\nThe top 5 in alphabetical order is:\n')
+ranking.sort()
+i = 1
+while i < 6:
+    print(ranking[i])
+    i+=1
 print('\n')
-for o in range(len(words)):
-    a1 = list(words[o].lower())
-    empty_list = list()
-    for i in range(len(a1)):
-        if a1[i] in vowels:
-            empty_list.append(a1[i])
-    print(f'{words[o]} -> contains {len(empty_list)} vowels = {empty_list}')
 
+print(f'The team "NEW YORK KNICKS" is in position: {a1}°\n')
+
+
+=SE(
+E(
+$I2 <> "";
+ANO($I2)<2020);
+"ANTIGO";
+
+SE(
+E(
+$G2 < $U$1;
+ $I2 = "");
+"ATIVO";
+
+SE(
+E(
+MÊS($G2)>MÊS($U$1);
+ANO($G2)>=ANO($U$1));
+"NÃO CONTRATADO";
+
+SE(
+$I2<$U$1;
+"DEMITIDO";
+
+SE(
+E(
+MÊS($G2)=MÊS($U$1);
+ANO($G2)=ANO($U$1);
+MÊS($I2)=MÊS($U$1);
+ANO($I2)=ANO($U$1));
+"ADMITIDO E DEMITIDO";
+
+SE(
+E(
+MÊS($I2) = MÊS($U$1);
+ANO($I2) = ANO($U$1));
+"DEMITIDO NO MÊS";
+
+SE(
+E(
+MÊS($G2)=MÊS($U$1);
+ANO($G2)=ANO($U$1);
+$I2="");
+"ADMITIDO NO MÊS";)))))))

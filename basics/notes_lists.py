@@ -1,4 +1,4 @@
-import main_utils as mu
+import mainScripts.main_utils as mu
 import random as rd
 
 #Lists

@@ -1,4 +1,4 @@
-import main_utils as mu
+import mainScripts.main_utils as mu
 
 #This will be the new 'mundo_3.py'
 

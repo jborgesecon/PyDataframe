@@ -1,9 +1,6 @@
 import sys
-sys.path.append("../") 
-# from dataValid import intValid
+sys.path.append('../')
+import dataValid as dv
 
-# intValid('message: ')
-
-from app import somar
-
-print(somar(1, 2))
+dv.header('Welcome to the program!')
+dv.sepper('Bellow are the options:')

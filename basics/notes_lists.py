@@ -1,4 +1,4 @@
-import mainScripts.main_utils as mu
+import dataValid as mu
 import random as rd
 
 #Lists

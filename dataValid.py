@@ -3,6 +3,7 @@ import pandas as pd
 import time 
 import numpy as np
 
+error1 = "Please enter a valid number"
 
 def sepper(msg, sep):
     print('\n', msg.center(30, sep))
@@ -19,6 +20,38 @@ def intValid(num):
             num = int(num)
             break
         except:
-            print("Please enter a valid number")
+            print(error1)
             num = input("Enter a number: ")
     return num
+
+def p_intValid(num):
+    while True:
+        try:
+            num = int(num)
+            if num < 0:
+                print("Please enter a positive number")
+                num = input("Enter a number: ")
+            else:
+                break
+        except:
+            print(error1)
+            num = input("Enter a number: ")
+    return num
+
+def floatValid(num):
+    while True:
+        try:
+            num = float(num)
+            break
+        except:
+            print(error1)
+            num = input("Enter a number: ")
+    return num
+
+def yn_valid(txt):
+    while True:
+        if txt == 'y' or txt == 'n':
+            break
+        else:
+            txt = input("Type 'y' for YES and 'n' for NO: ")
+    return txt

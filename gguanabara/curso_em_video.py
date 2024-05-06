@@ -1,6 +1,4 @@
-import sys
-sys.path.append('../')
-import dataValid as dv
+from models import dataValid as dv
 from mundo3 import *
 
 dv.header('Welcome to the program!')

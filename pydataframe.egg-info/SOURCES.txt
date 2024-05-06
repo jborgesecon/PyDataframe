@@ -1,0 +1,17 @@
+setup.py
+gguanabara/__init__.py
+gguanabara/curso_em_video.py
+gguanabara/mundo1.py
+gguanabara/mundo2.py
+gguanabara/mundo3.py
+mainScripts/__init__.py
+mainScripts/app.py
+mainScripts/blackjack.py
+mainScripts/convert_csv_utf8.py
+mainScripts/lottery.py
+models/__init__.py
+models/dataValid.py
+pydataframe.egg-info/PKG-INFO
+pydataframe.egg-info/SOURCES.txt
+pydataframe.egg-info/dependency_links.txt
+pydataframe.egg-info/top_level.txt

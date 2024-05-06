@@ -1,4 +1,4 @@
-import dataValid as mu
+import models.dataValid as mu
 import random as rd
 
 #Lists

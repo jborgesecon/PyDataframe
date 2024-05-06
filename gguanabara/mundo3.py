@@ -1,6 +1,4 @@
-import sys
-sys.path.append('../')
-import dataValid as dv
+from models import dataValid as dv
 import pandas as pd
 import random as rd
 

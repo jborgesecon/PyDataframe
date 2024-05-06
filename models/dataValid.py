@@ -1,7 +1,3 @@
-import random as rd
-import pandas as pd
-import time 
-import numpy as np
 
 error1 = "Please enter a valid number"
 

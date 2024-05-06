@@ -8,12 +8,26 @@ print('\n')
 # main -> modules -> eps -> tasks
 # list -> list -> dict -> function
 
+ep_names = list(
+    'Episode 16: Tuples',
+    'Episode 17: Lists 1',
+    'Episode 18: Lists 2'
+)
+
 ep_16 = {
     'Number Names (e72)': number_names,
     'Standings (e72)': standings,
     'Five Random Numbers': fv_randNums,
     'fourth task': ''
 }
+
+episodes = list()
+
+# for n in range(len(ep_names)):
+#     for m in range(len(ep_16)):
+
+
+# print(episodes[[0]])
 
 ep_list = list(ep_16.keys())
 

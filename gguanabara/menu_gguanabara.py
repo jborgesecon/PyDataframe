@@ -45,141 +45,100 @@ mundo_3 = {
 
 # Defining Episodes:
 ep_1 = {
-    'Number Names (e1)': number_names,
-    'Standings (e2)': standings,
-    'Five Random Numbers (e3)': fv_randNums
+    'generic': generic_print
 }
 
 ep_2 = {
-    'Number Names (e4)': number_names,
-    'Standings (e5)': standings,
-    'Five Random Numbers (e6)': fv_randNums
+    'generic': generic_print
 }
 
 ep_3 = {
-    'Number Names (e7)': number_names,
-    'Standings (e8)': standings,
-    'Five Random Numbers (e9)': fv_randNums
+    'generic': generic_print
 }
 
 ep_4 = {
-    'Number Names (e10)': number_names,
-    'Standings (e11)': standings,
-    'Five Random Numbers (e12)': fv_randNums
+    'generic': generic_print
 }
 
 ep_5 = {
-    'Number Names (e13)': number_names,
-    'Standings (e14)': standings,
-    'Five Random Numbers (e15)': fv_randNums
+    'generic': generic_print
 }
 
 ep_6 = {
-    'Number Names (e16)': number_names,
-    'Standings (e17)': standings,
-    'Five Random Numbers (e18)': fv_randNums
+    'generic': generic_print
 }
 
 ep_7 = {
-    'Number Names (e19)': number_names,
-    'Standings (e20)': standings,
-    'Five Random Numbers (e21)': fv_randNums
+    'generic': generic_print
 }
 
 ep_8 = {
-    'Number Names (e22)': number_names,
-    'Standings (e23)': standings,
-    'Five Random Numbers (e24)': fv_randNums
+    'generic': generic_print
 }
 
 ep_9 = {
-    'Number Names (e25)': number_names,
-    'Standings (e26)': standings,
-    'Five Random Numbers (e27)': fv_randNums
+    'generic': generic_print
 }
 
 ep_10 = {
-    'Number Names (e28)': number_names,
-    'Standings (e29)': standings,
-    'Five Random Numbers (e30)': fv_randNums
+    'generic': generic_print
 }
 
 ep_11 = {
-    'Number Names (e31)': number_names,
-    'Standings (e32)': standings,
-    'Five Random Numbers (e33)': fv_randNums
+    'generic': generic_print
 }
 
 ep_12 = {
-    'Number Names (e34)': number_names,
-    'Standings (e35)': standings,
-    'Five Random Numbers (e36)': fv_randNums
+    'generic': generic_print
 }
 
 ep_13 = {
-    'Number Names (e37)': number_names,
-    'Standings (e38)': standings,
-    'Five Random Numbers (e39)': fv_randNums
+    'generic': generic_print
 }
 
 ep_14 = {
-    'Number Names (e40)': number_names,
-    'Standings (e41)': standings,
-    'Five Random Numbers (e42)': fv_randNums
+    'generic': generic_print
 }
 
 ep_15 = {
-    'Number Names (e43)': number_names,
-    'Standings (e44)': standings,
-    'Five Random Numbers (e45)': fv_randNums
+    'generic': generic_print
 }
 
 ep_16 = {
     'Number Names (e72)': number_names,
     'Standings (e73)': standings,
-    'Five Random Numbers (e74)': fv_randNums
+    'Five Random Numbers (e74)': fv_randNums,
+    'Tuple Values (e75)': tuple_values,
+    'Shopping List': shopping_list,
+    'Finding Vowels (e77)': tuple_vowels
 }
 
 ep_17 = {
-    'Number Names (e46)': number_names,
-    'Standings (e47)': standings,
-    'Five Random Numbers (e48)': fv_randNums
+    'generic': generic_print
 }
 
 ep_18 = {
-    'Number Names (e49)': number_names,
-    'Standings (e50)': standings,
-    'Five Random Numbers (e51)': fv_randNums
+    'generic': generic_print
 }
 
 ep_19 = {
-    'Number Names (e52)': number_names,
-    'Standings (e53)': standings,
-    'Five Random Numbers (e54)': fv_randNums
+    'generic': generic_print
 }
 
 ep_20 = {
-    'Number Names (e55)': number_names,
-    'Standings (e56)': standings,
-    'Five Random Numbers (e57)': fv_randNums
+    'generic': generic_print
 }
 
 ep_21 = {
-    'Number Names (e58)': number_names,
-    'Standings (e59)': standings,
-    'Five Random Numbers (e60)': fv_randNums
+    'generic': generic_print
 }
 
 ep_22 = {
-    'Number Names (e61)': number_names,
-    'Standings (e62)': standings,
-    'Five Random Numbers (e63)': fv_randNums
+    'generic': generic_print
 }
 
 ep_23 = {
-    'Number Names (e64)': number_names,
-    'Standings (e65)': standings,
-    'Five Random Numbers (e66)': fv_randNums
+    'generic': generic_print
 }
 
 # Unify all objects:

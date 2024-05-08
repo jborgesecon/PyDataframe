@@ -93,7 +93,8 @@ while True:
                                     chosen()
                                 else:
                                     print(chosen)
-                                nav4 = dv.yn_valid(input('Want to try this task again? [y/n]'))
+                                print('\n')
+                                nav4 = dv.yn_valid(input('Want to try this task again? [y/n]: '))
                                 if nav4 == 'n':
                                     break
                             print('\n')
@@ -108,3 +109,4 @@ while True:
                 break
     except ValueError:
         print(error_msg)
+

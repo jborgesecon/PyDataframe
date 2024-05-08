@@ -15,7 +15,7 @@ def intValid(num):
         try:
             num = int(num)
             break
-        except:
+        except ValueError:
             print(error1)
             num = input("Enter a number: ")
     return num
@@ -29,7 +29,7 @@ def p_intValid(num):
                 num = input("Enter a number: ")
             else:
                 break
-        except:
+        except ValueError:
             print(error1)
             num = input("Enter a number: ")
     return num
@@ -39,7 +39,7 @@ def floatValid(num):
         try:
             num = float(num)
             break
-        except:
+        except ValueError:
             print(error1)
             num = input("Enter a number: ")
     return num

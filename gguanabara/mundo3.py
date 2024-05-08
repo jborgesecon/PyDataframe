@@ -23,7 +23,7 @@ def number_names():
 
 # e73
 def standings():
-    df = pd.read_csv('../datasets_copy/Standings.csv')
+    df = pd.read_csv('datasets_copy/Standings.csv')
     
     dv.sepper('Top 5:', ' ')
     print('\n')
@@ -61,6 +61,7 @@ def standings():
             print('Type an available team!')
     position = standings2.index(usr_team)
     print(f'The {usr_team} are in position {position + 1}°')
+
     
 # e74
 def fv_randNums():

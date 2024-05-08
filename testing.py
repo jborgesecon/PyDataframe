@@ -1,4 +1,7 @@
-name = input('type your name:')
-fill_pattern = '.'
+from gguanabara.mundo3 import *
+import pandas as pd
 
-print(name.center(30, fill_pattern))
+fv_randNums()
+
+df = pd.read_csv('datasets_copy/Standings.csv')
+print(df.head(5))

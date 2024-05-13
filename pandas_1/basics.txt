@@ -45,6 +45,40 @@ CALCULATION
     - calculate time difference
     - calculate spread 
 
+BASIC STATISTICS
+
+    - Measures of Central Tendency
+    - Measures of Dispersion
+    - Type of distribution (is it normally distibuted?)
+    - Create Field with randomly generated, normally distributed data for reference
+
+ADVANCED STATISTICS
+
+    - Verify the premisses
+    - Ordinary Least Squares (OLS Models)
+    - Geometric Least Squares (GLS Models)
+    - Cross Section/ Panel/ time-series
+    - Simple/ Multiple Linear Regression
+    - Logit/ Probit
+    - ARMA -> ARIMA, SARIMA, ETC
+
+MACHINE LEARNING
+
+    - Main Concepts
+    - What are Machine Learning Algorithms
+    - KNN
+    - Random Forest
+    - Naive Bayes
+    - Prophet
+
+GUI, DASHBOARDS, PRESENTATIONS
+
+    - Django
+    - Flask
+    - Streamlit
+    - TKinter, PySimpleGUI, FLET
+    - Pygame
+
 print(df.info())
 
 code_id = code_id::integer

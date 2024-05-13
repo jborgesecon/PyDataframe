@@ -4,4 +4,4 @@ import mundo3 as md
 import random as rd
 
 
-md.list_get_nums()
+md.zero_to_hundred_sorted()

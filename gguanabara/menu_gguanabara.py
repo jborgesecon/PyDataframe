@@ -109,7 +109,7 @@ ep_16 = {
     'Standings (e73)': standings,
     'Five Random Numbers (e74)': fv_randNums,
     'Tuple Values (e75)': tuple_values,
-    'Shopping List': shopping_list,
+    'Shopping List (e76)': shopping_list,
     'Finding Vowels (e77)': tuple_vowels
 }
 

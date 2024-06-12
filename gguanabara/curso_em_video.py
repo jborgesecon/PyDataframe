@@ -10,7 +10,7 @@ dv.header('Welcome to the Program!')
 
 while True:
     try:
-        dv.sepper('MAIN MENU', '.')
+        dv.sepper(' MAIN MENU ', '.')
         print('\n')
 
         for i in range(len(mg.dict_n1['lvl zero'])):

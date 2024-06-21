@@ -114,6 +114,10 @@ ep_16 = {
 }
 
 ep_17 = {
+    'List Values 1 (e78)': list_num_order,
+    'Unique Ordered List (e79)': unique_ordered_list,
+    'Ordered List 2 (e80)': unique_ordered_list,
+    'Ordered List 3 e(81)': ordered_list_i,
     'generic': generic_print
 }
 

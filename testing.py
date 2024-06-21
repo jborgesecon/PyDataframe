@@ -1,7 +1,9 @@
 from gguanabara.mundo3 import *
 import pandas as pd
+from models import dataValid as dv
+import random as rd
 
-fv_randNums()
 
-df = pd.read_csv('datasets_copy/Standings.csv')
-print(df.head(5))
+ll = []
+for i in range(50):
+    ll.append(rd.randint(0, 200))

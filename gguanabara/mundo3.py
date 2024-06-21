@@ -156,101 +156,67 @@ def tuple_vowels():
 
 # e78
 def list_num_order():
-    l1 = [
-        dv.intValid(input('Choose a number: ')),
-        dv.intValid(input('Choose a number: ')),
-        dv.intValid(input('Choose a number: ')),
-        dv.intValid(input('Choose a number: ')),
-        dv.intValid(input('Choose a number: '))        
-    ]
-
-    l2 = l1[:]
-    l2 = sorted(l2)
-
-    mx = max(l1)
-    mn = min(l1)
-    tot_mx = l1.count(mx)
-    tot_mn = l1.count(mn)
-
-    print('\n')
-    print(f'The highest number was {mx}')
-    print(f'The lowest number was {mn}')
-
-    if tot_mx == 1:
-        cod = l1.index(mx)
-        print(f'The number {mx} is in position: {cod + 1}° ')
-    else:
-        positions = [index for index, value in enumerate(l1, start= 1) if value == mx]
-        print(f'The number {mx} is at positions: ', end='')
-        for i in range(len(positions)):
-            print(f'{positions[i]}... ', end='')
-        print('')
-
-
-    if tot_mn == 1:
-        cod = l1.index(mn)
-        print(f'The number {mn} is in position: {cod + 1}° ')
-    else:
-        positions2 = [index for index, value in enumerate(l1, start= 1) if value == mn]
-        print(f'The number {mn} is at positions: ', end='')
-        for i in range(len(positions2)):
-            print(f'{positions2[i]}... ', end='')
-        print('')
-
+    m_list = list()
+    for i in range(5):
+        value = dv.intValid(input(f'Enter a number for position {i + 1}°: '))
+        m_list.append(value)
     
+    print('-=' * 30)
     print('\n')
+
+    mx = max(m_list)
+    mn = min(m_list)
+    
+    print(f'You type the values {m_list}')
+    print(f'The highest value was {mx}')
+    print(f'The lowest value was {mn}')
+    
+    mx_positions = [i + 1 for i, x in enumerate(m_list) if x == mx]
+    mn_positions = [i + 1 for i, x in enumerate(m_list) if x == mn]
+
+    print(f'The value {mx} appeared in positions: ', end='')
+    print(', '.join(f'{pos}°' for pos in mx_positions))
+    print(f'The value {mn} appeared in positions: ', end='')
+    print(', '.join(f'{pos}°' for pos in mn_positions))
+    print('')
+    return
 
 # e79
-def list_get_nums():
-    msg = 'y'
-    org_list = list()
-    while msg == 'y':
-        num = dv.intValid(input('Chose a number: '))
-        if not org_list:
-            org_list.append(num)
+def unique_ordered_list():
+    m_list = list()
+    while True:
+        num = dv.intValid(input('Enter a number:'))
+        if num in m_list:
+            print(f"{num} is already on the list, won't be added")
         else:
             inserted = False
-            for index in range(len(org_list)):
-                if num in org_list:
-                    print(f"{num} is already on the list and won't be added")
+            for i in range(len(m_list)):
+                if num < m_list[i]:
+                    m_list.insert(i, num)
                     inserted = True
                     break
-                elif num < org_list[index]:
-                    org_list.insert(index, num)
-                    break
             if not inserted:
-                org_list.append(num)
-
-        msg = dv.yn_valid(input('Wanna choose another number? [y/n]: '))
-    
+                m_list.append(num)
+        ans2 = dv.yn_valid(input('Would you like to try again? [y/n]: '))
+        if ans2 == 'n':
+            break
     print('\n')
-    print(org_list)
+    print(m_list)
     print('\n')
     return
 
-def zero_to_hundred_sorted():
-    organized_list = list()
-    while len(organized_list) < 101:
-        number = rd.randint(0, 100)
-        if not organized_list:
-            organized_list.append(number)
-            print('\n')
-            print(organized_list)
-        else:
-            inserted = False
-            for index in range(len(organized_list)):
-                if number in organized_list:
-                    print(f"{number} is already in list, won't be added")
-                    inserted = True
-                    break
-                elif organized_list[index] > number:
-                    organized_list.insert(index, number)
-                    print('\n')
-                    print(organized_list)
-                    inserted = True
-            if not inserted:
-                organized_list.append(number)
-                print('\n')
-                print(organized_list)
-    print('\n')
-    print(organized_list)
+# e80
+# same as 79
+
+# e81
+def ordered_list_i():
+    # how many number do you want to type?:
+    # print resverse sort (both methods, both prints)
+    # if 5 in list, print position, else print 'not in the list'
+    m_list = list()
+    length = dv.intValid(input('How many number do you want in the list: '))
+    for i in range(length):
+        m_list.append(rd.randint(0, 100))
+    sorted(m_list, reverse=True)
+    print(m_list )
+    return

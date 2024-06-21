@@ -1,26 +1,21 @@
-import sqlalchemy as sa
-from sqlalchemy.engine import reflection
-import credentials
+import credentials as crd
+import sqlalchemy as sa, create_engine
+from sqlalchemy.orm import Mapped, mapped_column, sessionmaker, declarative_base
+import urllib.parse
 
-# Connection parameters
-database_name = credentials.database_name
-username = credentials.username
-password = credentials.password
-host = credentials.host
-port = credentials.port
 
-# Create an SQLAlchemy engine
-engine = sa.create_engine(f"postgresql://{username}:{password}@{host}:{port}/{database_name}")
+u = crd.username
+psswd = crd.password
+h = crd.host
+port = crd.port
+db = crd.database_name
 
-# Use SQLAlchemy's reflection to get information about the database schema
-inspector = reflection.Inspector.from_engine(engine)
+# Connection string
+conn_str = f'postgresql://{u}:{psswd}@{h}:{port}/{db}'
+engine = sa.create_engine(conn_str)
 
-# Get the list of all tables
-table_names = inspector.get_table_names()
+with engine.connect() as connection:
+    result = connection.execute('select * from services.quantitativo_controladoria_1 qc limit 10;')
+    for row in result:
+        print(row)
 
-# Print all table names
-print("Tables in the 'beautiful_garden' database:")
-for table_name in table_names:
-    print(table_name)
-
-# No need to close the engine, SQLAlchemy handles connection pooling

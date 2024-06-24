@@ -1,7 +1,0 @@
-
-
-
-#Dictionaries
-print('\n')
-
-#DataFrame

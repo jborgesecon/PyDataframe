@@ -1,3 +1,0 @@
-gguanabara
-mainScripts
-models

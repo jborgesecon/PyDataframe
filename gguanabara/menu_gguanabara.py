@@ -1,4 +1,4 @@
-import dataValid as dv
+from ..models import dataValid as dv
 from mundo3 import *
 
 

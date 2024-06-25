@@ -1,6 +1,9 @@
 import pandas as pd
+import os
 
 
-csv = 'C:\\Users\\joao.santos\\Desktop\\Projects\\CODING\\Repository\\PyDataframe\\gguanabara\\Standings.csv'
+# print("current working directory: ", os.getcwd())
+
+csv = 'datasets_copy/Standings.csv'
 df = pd.read_csv(csv)
-print(df.head(5))
+print(df.head())

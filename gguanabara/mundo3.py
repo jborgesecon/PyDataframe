@@ -1,4 +1,4 @@
-import dataValid as dv
+import models.dataValid as dv
 import pandas as pd
 import random as rd
 

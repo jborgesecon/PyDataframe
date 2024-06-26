@@ -1,4 +1,3 @@
-from ..models import dataValid as dv
 from mundo3 import *
 
 
@@ -116,9 +115,10 @@ ep_16 = {
 ep_17 = {
     'List Values 1 (e78)': list_num_order,
     'Unique Ordered List (e79)': unique_ordered_list,
-    'Ordered List 2 (e80)': unique_ordered_list,
-    'Ordered List 3 e(81)': ordered_list_i,
-    'generic': generic_print
+    'Ordered List 2 (e80)': unlimited_list,
+    'Ordered List 3 (e81)': ordered_list_i,
+    'Even x Odd list (e82)': even_odd_list,
+    'Balanced Parentheses (e83)': checkBalanced
 }
 
 ep_18 = {

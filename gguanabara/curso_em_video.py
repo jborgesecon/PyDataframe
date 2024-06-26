@@ -1,6 +1,6 @@
 import menu_gguanabara as mg
 import pandas as pd
-import models.dataValid as dv
+import dataValid as dv
 
 
 error_msg = 'Type a value within the range!'

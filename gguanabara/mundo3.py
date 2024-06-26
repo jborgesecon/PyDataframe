@@ -1,6 +1,7 @@
-import models.dataValid as dv
+import dataValid as dv
 import pandas as pd
 import random as rd
+import time
 
 
 
@@ -28,7 +29,7 @@ def number_names():
 
 # e73
 def standings():
-    csv = 'C:\\Users\\joao.santos\\Desktop\\Projects\\CODING\\Repository\\PyDataframe\\gguanabara\\Standings.csv'
+    csv = 'datasets_copy/Standings.csv'
     df = pd.read_csv(csv)
     
     dv.sepper('Top 5:', ' ')
@@ -209,6 +210,34 @@ def unique_ordered_list():
 # e80
 # same as 79
 
+def unlimited_list():
+    m_list = list()
+    length = dv.intValid(input('How many number do you want in the list: '))
+    while True:
+        if len(m_list) == length:
+            # print(m_list)
+            break
+        num = rd.randint(1, length)
+        if not m_list:
+            m_list.append(num)
+        elif num in m_list:
+            print(f'{num} is already on the list!')
+        else:
+            for i in range(len(m_list)):
+                if num < m_list[i]:
+                    m_list.insert(i, num)
+                    print(m_list)
+                    break
+                elif num > m_list[-1]:
+                    m_list.append(num)
+                    break
+                else:
+                    print(m_list)
+                    dv.sepper(str(num), '*')
+        print(m_list)
+    print(len(m_list))
+    return
+
 # e81
 def ordered_list_i():
     # how many number do you want to type?:
@@ -220,4 +249,33 @@ def ordered_list_i():
         m_list.append(rd.randint(0, 100))
     sorted(m_list, reverse=True)
     print(m_list )
+    return
+
+# e82
+def even_odd_list():
+    m_list = list()
+    length = dv.intValid(input('How long do you want your list to be: '))
+    odd_list = list()
+    even_list = list()
+    for i in range(length):
+        usr = dv.intValid(input(f'type the {i + 1}° value: '))
+        m_list.append(usr)
+        if usr % 2 == 0:
+            even_list.append(usr)
+        else:
+            odd_list.append(usr)
+
+    m_list = sorted(m_list)
+    even_list = sorted(even_list)
+    odd_list = sorted(odd_list)
+
+    print(f'The values you types were: {m_list}')
+    print(f'The even numbers were => {even_list}')
+    print(f'The odds numbers were => {odd_list}')
+    return
+
+
+# e83
+def checkBalanced():
+    
     return
